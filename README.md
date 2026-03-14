@@ -4,7 +4,7 @@ A lightweight, full-stack Human Resource Management System built with modern web
 
 ## 🔗 Live Application URLs
 
-**Frontend Application:** [https://hrms-lite-git-main-nikkibbts-projects.vercel.app/](https://hrms-lite-fseh.vercel.app)  
+**Frontend Application:** [https://hrms-lite-khaki.vercel.app/](https://hrms-lite-khaki.vercel.app)  
 **Backend API:** [ https://hrms-lite-jr8p.onrender.com/api]( https://hrms-lite-jr8p.onrender.com/api)  
 **API Documentation:** [ https://hrms-lite-jr8p.onrender.com/api-docs]( https://hrms-lite-jr8p.onrender.com/api-docs)
 
@@ -157,7 +157,7 @@ hrms-lite/
 
 ### 🚀 Try the Live Application
 
-**Live Application:** [https://hrms-lite-git-main-nikkibbts-projects.vercel.app](https://hrms-lite-git-main-nikkibbts-projects.vercel.app)
+**Live Application:** [https://hrms-lite-khaki.vercel.apps](https://hrms-lite-khaki.vercel.app)
 
 ### 💻 Local Development Setup
 
@@ -461,7 +461,7 @@ Navigate to `http://localhost:5000`
 ### Live URLs
 
 **Frontend Application (Live):**
-- Application URL: [https://hrms-lite-fseh.vercel.app](https://hrms-lite-fseh.vercel.app)
+- Application URL: [https://hrms-lite-khaki.vercel.app](https://hrms-lite-khaki.vercel.app)
 - Deployed on: Vercel
 
 **Backend API (Live):**
