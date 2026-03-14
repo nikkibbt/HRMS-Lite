@@ -32,6 +32,7 @@ const AttendanceHistory = () => {
       setLoading(true);
       setError(null);
       const data = await attendanceApi.getHistory();
+      console.log(data,"data")
       setHistoryData(data.data);
       setTotalRecords(data.totalRecords);
     } catch (err: any) {
@@ -438,62 +439,65 @@ const AttendanceHistory = () => {
           </div>
         </div>
 
+       
         <div className="filter-row">
-          <div className="filter-group">
-            <label htmlFor="sortBy">Sort By</label>
-            <select
-              id="sortBy"
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortOption)}
-              className="filter-select"
-            >
-              <option value="date-desc">Date (Newest First)</option>
-              <option value="date-asc">Date (Oldest First)</option>
-              <option value="employee-asc">Employee (A-Z)</option>
-              <option value="employee-desc">Employee (Z-A)</option>
-              <option value="department-asc">Department (A-Z)</option>
-              <option value="department-desc">Department (Z-A)</option>
-              <option value="status-asc">Status (Present First)</option>
-              <option value="status-desc">Status (Absent First)</option>
-            </select>
-          </div>
+  <div className="filter-group">
+    <label htmlFor="sortBy">Sort By</label>
+    <select
+      id="sortBy"
+      value={sortBy}
+      onChange={(e) => setSortBy(e.target.value as SortOption)}
+      className="filter-select"
+    >
+      <option value="date-desc">Date (Newest First)</option>
+      <option value="date-asc">Date (Oldest First)</option>
+      <option value="employee-asc">Employee (A-Z)</option>
+      <option value="employee-desc">Employee (Z-A)</option>
+      <option value="department-asc">Department (A-Z)</option>
+      <option value="department-desc">Department (Z-A)</option>
+      <option value="status-asc">Status (Present First)</option>
+      <option value="status-desc">Status (Absent First)</option>
+    </select>
+  </div>
 
-          <div className="filter-group">
-            <label htmlFor="groupBy">Group By</label>
-            <select
-              id="groupBy"
-              value={groupBy}
-              onChange={(e) => setGroupBy(e.target.value as GroupByOption)}
-              className="filter-select"
-            >
-              <option value="month">Month</option>
-              <option value="department">Department</option>
-              <option value="employee">Employee</option>
-              <option value="status">Status</option>
-              <option value="none">No Grouping</option>
-            </select>
-          </div>
+  <div className="filter-group">
+    <label htmlFor="groupBy">Group By</label>
+    <select
+      id="groupBy"
+      value={groupBy}
+      onChange={(e) => setGroupBy(e.target.value as GroupByOption)}
+      className="filter-select"
+    >
+      <option value="month">Month</option>
+      <option value="department">Department</option>
+      <option value="employee">Employee</option>
+      <option value="status">Status</option>
+      <option value="none">No Grouping</option>
+    </select>
+  </div>
 
-          <div className="filter-group filter-actions">
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedMonth('all');
-                setStartDate('');
-                setEndDate('');
-                setUseDateRange(false);
-                setSearchQuery('');
-                setStatusFilter('all');
-                setDepartmentFilter('all');
-                setSortBy('date-desc');
-                setGroupBy('month');
-              }}
-              className="btn btn-secondary"
-            >
-              Reset Filters
-            </button>
-          </div>
-        </div>
+  <div className="filter-group filter-actions">
+    <label>&nbsp;</label> {/* Empty label for alignment */}
+    <button
+      type="button"
+      onClick={() => {
+        setSelectedMonth('all');
+        setStartDate('');
+        setEndDate('');
+        setUseDateRange(false);
+        setSearchQuery('');
+        setStatusFilter('all');
+        setDepartmentFilter('all');
+        setSortBy('date-desc');
+        setGroupBy('month');
+      }}
+      className="btn btn-secondary filter-button"
+    >
+      
+      Clear Filters
+    </button>
+  </div>
+</div>
       </div>
 
       {historyData.length === 0 ? (

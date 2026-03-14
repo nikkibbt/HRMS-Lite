@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Employee } from '../types';
-import { employeeApi } from '../services/api';
-import EmployeeCard from './EmployeeCard';
-import LoadingSpinner from './LoadingSpinner';
-import ConfirmationModal from './ConfirmationModal';
-import AlertModal from './AlertModal';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { Employee } from "../types";
+import { employeeApi } from "../services/api";
+import EmployeeCard from "./EmployeeCard";
+import LoadingSpinner from "./LoadingSpinner";
+import ConfirmationModal from "./ConfirmationModal";
+import AlertModal from "./AlertModal";
 
 const EmployeeList = () => {
   const navigate = useNavigate();
@@ -19,18 +19,18 @@ const EmployeeList = () => {
   }>({
     isOpen: false,
     employeeId: null,
-    employeeName: '',
+    employeeName: "",
   });
   const [alertModal, setAlertModal] = useState<{
     isOpen: boolean;
     title: string;
     message: string;
-    type: 'error' | 'success' | 'info' | 'warning';
+    type: "error" | "success" | "info" | "warning";
   }>({
     isOpen: false,
-    title: '',
-    message: '',
-    type: 'info',
+    title: "",
+    message: "",
+    type: "info",
   });
 
   const fetchEmployees = async () => {
@@ -38,9 +38,10 @@ const EmployeeList = () => {
       setLoading(true);
       setError(null);
       const data = await employeeApi.getAll();
+      console.log("data");
       setEmployees(data);
     } catch (err: any) {
-      setError(err.response?.data?.message || 'Failed to fetch employees');
+      setError(err.response?.data?.message || "Failed to fetch employees");
     } finally {
       setLoading(false);
     }
@@ -63,29 +64,31 @@ const EmployeeList = () => {
 
     try {
       await employeeApi.delete(deleteModal.employeeId);
-      setEmployees(employees.filter((emp) => emp._id !== deleteModal.employeeId));
+      setEmployees(
+        employees.filter((emp) => emp._id !== deleteModal.employeeId),
+      );
       setDeleteModal({
         isOpen: false,
         employeeId: null,
-        employeeName: '',
+        employeeName: "",
       });
       setAlertModal({
         isOpen: true,
-        title: 'Success',
+        title: "Success",
         message: `Employee "${deleteModal.employeeName}" has been deleted successfully.`,
-        type: 'success',
+        type: "success",
       });
     } catch (err: any) {
       setDeleteModal({
         isOpen: false,
         employeeId: null,
-        employeeName: '',
+        employeeName: "",
       });
       setAlertModal({
         isOpen: true,
-        title: 'Error',
-        message: err.response?.data?.message || 'Failed to delete employee',
-        type: 'error',
+        title: "Error",
+        message: err.response?.data?.message || "Failed to delete employee",
+        type: "error",
       });
     }
   };
@@ -94,7 +97,7 @@ const EmployeeList = () => {
     setDeleteModal({
       isOpen: false,
       employeeId: null,
-      employeeName: '',
+      employeeName: "",
     });
   };
 
@@ -128,13 +131,41 @@ const EmployeeList = () => {
   return (
     <>
       <div className="employee-list">
-        <h2>Employee List</h2>
+        <div
+          className="employee-section-header"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between", 
+          }}
+        >
+          <h2
+            className="employee-title"
+            style={{
+              marginBottom:  "40px"
+            }}
+          >
+            Employee List
+          </h2>
+
+          <button
+            className="btn btn-primary add-employee-btn"
+            onClick={() => navigate("/add-employee")}
+            style={{
+              marginLeft: "1rem", // optional spacing
+            }}
+          >
+            <span>+</span> Add Employee
+          </button>
+        </div>
         <div className="employee-grid">
           {employees.map((employee) => (
             <EmployeeCard
               key={employee._id}
               employee={employee}
-              onDelete={() => handleDeleteClick(employee._id, employee.fullName)}
+              onDelete={() =>
+                handleDeleteClick(employee._id, employee.fullName)
+              }
               onClick={handleEmployeeClick}
             />
           ))}
@@ -160,9 +191,9 @@ const EmployeeList = () => {
         onClose={() =>
           setAlertModal({
             isOpen: false,
-            title: '',
-            message: '',
-            type: 'info',
+            title: "",
+            message: "",
+            type: "info",
           })
         }
       />

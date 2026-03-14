@@ -29,12 +29,7 @@ function App() {
         >
           Employees
         </NavLink>
-        <NavLink
-          to="/add-employee"
-          className={({ isActive }) => (isActive ? 'active' : '')}
-        >
-          Add Employee
-        </NavLink>
+       
         <NavLink
           to="/attendance"
           className={({ isActive }) => (isActive ? 'active' : '')}
