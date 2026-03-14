@@ -1,0 +1,18 @@
+# render.yaml
+services:
+  - type: web
+    name: hrms-lite-backend
+    runtime: node
+    repo: https://github.com/nikkibbt/HRMS-Lite
+    plan: free
+    region: oregon
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
