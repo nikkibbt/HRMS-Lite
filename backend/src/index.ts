@@ -104,7 +104,7 @@ startServer();
 // create setInterval to check if the server is running
 setInterval(() => {
   console.log('Server is running');
-  // fetch(' https://hrms-lite-jr8p.onrender.com/api/health').then(async(data: any) =>   {
+
   fetch('https://hrms-lite-jr8p.onrender.com/api/health').then(async(data: any) =>   {
     https://hrms-lite-jr8p.onrender.com
     console.log('Server is running',await data.json());

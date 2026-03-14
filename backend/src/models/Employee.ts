@@ -62,8 +62,6 @@ const EmployeeSchema: Schema = new Schema(
   }
 );
 
-// Create indexes for better performance and to enforce uniqueness
-EmployeeSchema.index({ employeeId: 1 }, { unique: true });
-EmployeeSchema.index({ email: 1 }, { unique: true });
+
 
 export default mongoose.model<IEmployee>('Employee', EmployeeSchema);
