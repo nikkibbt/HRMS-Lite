@@ -227,7 +227,18 @@ const AddEmployeeForm = () => {
   };
 
   return (
+    <>
+    <button 
+          onClick={() => navigate('/employees')} 
+          className="btn-back"
+          title="Go back to employee list"
+          style={{marginBottom:"15px"}}
+        >
+          ← Back to Employees
+        </button>
+   
     <div className="add-employee-form">
+      
       <h2>Add New Employee</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -359,6 +370,7 @@ const AddEmployeeForm = () => {
         </button>
       </form>
     </div>
+     </>
   );
 };
 
