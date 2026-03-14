@@ -8,6 +8,7 @@ services:
     region: oregon
     buildCommand: cd backend && npm install && npm run build
     startCommand: cd backend && npm start
+   
     healthCheckPath: /health
     envVars:
       - key: NODE_VERSION

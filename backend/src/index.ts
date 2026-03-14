@@ -12,7 +12,7 @@ import historyRoutes from './routes/historyRoutes';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -104,7 +104,9 @@ startServer();
 // create setInterval to check if the server is running
 setInterval(() => {
   console.log('Server is running');
-  fetch('https://hrms-lite-9yp1.onrender.com/api/health').then(async(data: any) =>   {
+  // fetch(' https://hrms-lite-jr8p.onrender.com/api/health').then(async(data: any) =>   {
+  fetch('https://hrms-lite-jr8p.onrender.com/api/health').then(async(data: any) =>   {
+    https://hrms-lite-jr8p.onrender.com
     console.log('Server is running',await data.json());
   }).catch((error: any) => {
     console.error('Server is not running', error);
