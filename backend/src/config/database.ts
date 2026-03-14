@@ -6,8 +6,7 @@ dotenv.config();
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  console.error('CRITICAL: MONGODB_URI is missing');
-  process.exit(1);
+  throw new Error('❌ MONGODB_URI is not defined in .env');
 }
 
 export const connectDatabase = async (): Promise<void> => {
@@ -16,6 +15,6 @@ export const connectDatabase = async (): Promise<void> => {
     console.log('✅ MongoDB connected successfully');
   } catch (error) {
     console.error('❌ MongoDB connection error:', error);
-    process.exit(1);
+    process.exit(1); // Stop the server if DB connection fails
   }
 };

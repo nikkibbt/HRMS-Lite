@@ -4,9 +4,9 @@ A lightweight, full-stack Human Resource Management System built with modern web
 
 ## 🔗 Live Application URLs
 
-**Frontend Application:** [https://hrms-lite-fseh.vercel.app](https://hrms-lite-fseh.vercel.app)  
-**Backend API:** [https://hrms-lite-9yp1.onrender.com/api](https://hrms-lite-9yp1.onrender.com/api)  
-**API Documentation:** [https://hrms-lite-9yp1.onrender.com/api-docs](https://hrms-lite-9yp1.onrender.com/api-docs)
+**Frontend Application:** [https://hrms-lite-git-main-nikkibbts-projects.vercel.app/](https://hrms-lite-fseh.vercel.app)  
+**Backend API:** [ https://hrms-lite-jr8p.onrender.com/api]( https://hrms-lite-jr8p.onrender.com/api)  
+**API Documentation:** [ https://hrms-lite-jr8p.onrender.com/api-docs]( https://hrms-lite-jr8p.onrender.com/api-docs)
 
 ## ✨ Highlights
 
@@ -157,7 +157,7 @@ hrms-lite/
 
 ### 🚀 Try the Live Application
 
-**Live Application:** [https://hrms-lite-fseh.vercel.app](https://hrms-lite-fseh.vercel.app)
+**Live Application:** [https://hrms-lite-git-main-nikkibbts-projects.vercel.app](https://hrms-lite-git-main-nikkibbts-projects.vercel.app)
 
 ### 💻 Local Development Setup
 
@@ -225,7 +225,8 @@ NODE_ENV=development
 
 For MongoDB Atlas (cloud), use:
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/hrms-lite
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<database-name>?retryWrites=true&w=majority
+
 ```
 
 5. Start the backend server:
@@ -288,7 +289,7 @@ npm run dev
 ```
 
 4. **Open Browser**:
-Navigate to `http://localhost:3000`
+Navigate to `http://localhost:5000`
 
 ## 📡 API Endpoints
 
@@ -350,7 +351,7 @@ Navigate to `http://localhost:3000`
 
 **Access Swagger UI:** 
 - Local: Navigate to `http://localhost:5000/api-docs` when the server is running locally
-- Live: [https://hrms-lite-9yp1.onrender.com/api-docs](https://hrms-lite-9yp1.onrender.com/api-docs)
+- Live: [ https://hrms-lite-jr8p.onrender.com/api-docs]( https://hrms-lite-jr8p.onrender.com/api-docs)
 
 ## 🎨 UI Features
 
@@ -464,15 +465,15 @@ Navigate to `http://localhost:3000`
 - Deployed on: Vercel
 
 **Backend API (Live):**
-- Base URL: `https://hrms-lite-9yp1.onrender.com/api`
-- Swagger Documentation: [https://hrms-lite-9yp1.onrender.com/api-docs](https://hrms-lite-9yp1.onrender.com/api-docs)
-- Health Check: [https://hrms-lite-9yp1.onrender.com/api/health](https://hrms-lite-9yp1.onrender.com/api/health)
+- Base URL: ` https://hrms-lite-jr8p.onrender.com/api`
+- Swagger Documentation: [ https://hrms-lite-jr8p.onrender.com/api-docs]( https://hrms-lite-jr8p.onrender.com/api-docs)
+- Health Check: [ https://hrms-lite-jr8p.onrender.com/api/health]( https://hrms-lite-jr8p.onrender.com/api/health)
 - Deployed on: Render
 
 **Example API Endpoints:**
-- Get all employees: `https://hrms-lite-9yp1.onrender.com/api/employees`
-- Get analytics: `https://hrms-lite-9yp1.onrender.com/api/analytics/summary`
-- Get attendance history: `https://hrms-lite-9yp1.onrender.com/api/history`
+- Get all employees: ` https://hrms-lite-jr8p.onrender.com/api/employees`
+- Get analytics: ` https://hrms-lite-jr8p.onrender.com/api/analytics/summary`
+- Get attendance history: ` https://hrms-lite-jr8p.onrender.com/api/history`
 
 ### Backend Deployment (Render/Railway/Heroku)
 
@@ -506,13 +507,13 @@ npm run build
 2. **Deploy to Vercel**:
    - Install Vercel CLI: `npm i -g vercel`
    - Run `vercel` in the frontend directory
-   - Set environment variable: `VITE_API_URL=https://hrms-lite-9yp1.onrender.com/api`
+   - Set environment variable: `VITE_API_URL= https://hrms-lite-jr8p.onrender.com/api`
 
 3. **Deploy to Netlify**:
    - Connect GitHub repository
    - Set build command: `npm run build`
    - Set publish directory: `dist`
-   - Add environment variable: `VITE_API_URL=https://hrms-lite-9yp1.onrender.com/api`
+   - Add environment variable: `VITE_API_URL= https://hrms-lite-jr8p.onrender.com/api`
 
 ### Environment Variables for Production
 
@@ -526,7 +527,7 @@ NODE_ENV=production
 **Frontend (.env)**:
 ```env
 # For production (using live backend)
-VITE_API_URL=https://hrms-lite-9yp1.onrender.com/api
+VITE_API_URL= https://hrms-lite-jr8p.onrender.com/api
 
 # For local development
 # VITE_API_URL=http://localhost:5000/api
