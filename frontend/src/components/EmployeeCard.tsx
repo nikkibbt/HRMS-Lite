@@ -1,4 +1,4 @@
-import { Employee } from '../types';
+import { Employee } from "../types";
 
 interface EmployeeCardProps {
   employee: Employee;
@@ -6,24 +6,23 @@ interface EmployeeCardProps {
   onClick: (id: string) => void;
 }
 
-
 const EmployeeCard = ({ employee, onDelete, onClick }: EmployeeCardProps) => {
   const handleCardClick = (e: React.MouseEvent) => {
     // Don't trigger if clicking on delete button
-    if ((e.target as HTMLElement).closest('.btn-delete')) {
+    if ((e.target as HTMLElement).closest(".btn-delete")) {
       return;
     }
     onClick(employee._id);
   };
 
   return (
-    <div 
-      className="employee-card" 
+    <div
+      className="employee-card"
       onClick={handleCardClick}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === "Enter" || e.key === " ") {
           onClick(employee._id);
         }
       }}
@@ -42,8 +41,18 @@ const EmployeeCard = ({ employee, onDelete, onClick }: EmployeeCardProps) => {
           aria-label="Delete employee"
           title="Delete employee"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="red"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
       </div>
@@ -55,14 +64,23 @@ const EmployeeCard = ({ employee, onDelete, onClick }: EmployeeCardProps) => {
         </div>
         <div className="detail-item">
           <span className="detail-label">Department : </span>
-          <span className="detail-value department-badge">{employee.department}</span>
+          <span className="detail-value department-badge">
+            {employee.department}
+          </span>
         </div>
       </div>
 
       <div className="employee-card-footer">
         <span className="view-details">
-          View Profile
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          View Details
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+          >
             <path d="M9 5l7 7-7 7" />
           </svg>
         </span>

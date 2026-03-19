@@ -179,12 +179,7 @@ const Summary = () => {
       {/* KPI Cards */}
       <div className="kpi-grid">
         <div className="kpi-card">
-          <div
-            className="kpi-icon"
-            style={{ background: "linear-gradient(135deg, #6366f1, #8b5cf6)" }}
-          >
-            👥
-          </div>
+          
           <div className="kpi-content">
             <span className="kpi-label">Total Employees</span>
             <span className="kpi-value">{data.overview.totalEmployees}</span>
@@ -193,12 +188,7 @@ const Summary = () => {
         </div>
 
         <div className="kpi-card">
-          <div
-            className="kpi-icon"
-            style={{ background: "linear-gradient(135deg, #10b981, #34d399)" }}
-          >
-            ✅
-          </div>
+         
           <div className="kpi-content">
             <span className="kpi-label">Present Today</span>
             <span className="kpi-value">{data.overview.presentCount}</span>
@@ -207,12 +197,7 @@ const Summary = () => {
         </div>
 
         <div className="kpi-card">
-          <div
-            className="kpi-icon"
-            style={{ background: "linear-gradient(135deg, #f59e0b, #fbbf24)" }}
-          >
-            📊
-          </div>
+         
           <div className="kpi-content">
             <span className="kpi-label">Attendance Rate</span>
             <span className="kpi-value">{data.overview.attendanceRate}%</span>
@@ -221,12 +206,7 @@ const Summary = () => {
         </div>
 
         <div className="kpi-card">
-          <div
-            className="kpi-icon"
-            style={{ background: "linear-gradient(135deg, #ef4444, #f87171)" }}
-          >
-            ❌
-          </div>
+         
           <div className="kpi-content">
             <span className="kpi-label">Absent Today</span>
             <span className="kpi-value">{data.overview.absentCount}</span>
@@ -241,7 +221,6 @@ const Summary = () => {
         </div>
       </div>
 
-      {/* Secondary Metrics */}
       <div className="metrics-row">
         <div className="metric-card">
           <span className="metric-label">Average Daily Attendance</span>
@@ -271,7 +250,7 @@ const Summary = () => {
         </div>
       </div>
 
-      {/* Charts Grid */}
+     
       <div className="charts-grid">
         {/* Present vs Absent Pie Chart */}
         <div className="chart-card">
@@ -521,3 +500,7 @@ const Summary = () => {
 };
 
 export default Summary;
+
+
+
+

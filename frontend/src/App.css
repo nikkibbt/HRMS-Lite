@@ -373,36 +373,25 @@
 }
 
 .employee-card {
-  /* background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  position: relative; */
+  
   background: white;
   border-radius: 12px;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
   cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
-  outline: none;
+
 }
 
 .employee-card:hover {
-  /* transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
-  transform: translateY(-2px);
-  box-shadow:
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  transform: translateY(-4px);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-color: #d1d5db;
 }
 
@@ -413,12 +402,10 @@
 }
 
 .view-details {
-  /* color: #667eea;
-  font-size: 0.875rem;
-  font-weight: 500; */
+ 
   color: #3b82f6;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -440,20 +427,8 @@
 }
 
 .btn-delete {
-  /* background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  line-height: 1; */
-  background: none;
+
+  background: rgb(251, 232, 232);
   border: none;
   padding: 0.5rem;
   cursor: pointer;
@@ -467,8 +442,8 @@
 }
 
 .btn-delete:hover {
-  /* background: #c82333;
-  transform: scale(1.1); */
+  /* background: #c82333;*/
+ transform: scale(1.1); 
   background: #fee2e2;
   color: #dc2626;
 }
@@ -489,14 +464,15 @@
   margin: 0;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: #000;
   line-height: 1.4;
 }
 
 .employee-id-badge {
   font-size: 0.75rem;
-  color: #6b7280;
-  background: #f3f4f6;
+  color: #808080;
+  font-weight: 500;
+ 
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   display: inline-block;
@@ -509,7 +485,8 @@
 }
 
 .employee-card-body strong {
-  color: #333;
+  color: #000;
+  font-weight: 400;
 }
 
 /* Attendance Management */
@@ -742,7 +719,7 @@
 .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  border-radius: 12px;
+  border-radius: 2px;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -901,8 +878,8 @@
 }
 
 .detail-label {
-  font-weight: 600;
-  color: #666;
+  font-weight: 500;
+  color: #000;
   min-width: 150px;
   flex-shrink: 0;
 }
@@ -1277,12 +1254,12 @@
 }
 
 .employee-id {
-  font-family: "Courier New", monospace;
-  background: #f0f0f0;
+  
+ 
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.875rem;
-  color: #555;
+  color: #000;
 }
 
 .employee-missing {
@@ -1291,12 +1268,12 @@
 }
 
 .department-badge {
-  background: #e3f2fd;
+  
   color: #1976d2;
-  padding: 0.25rem 0.75rem;
+  
   border-radius: 12px;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-muted {
@@ -1604,24 +1581,29 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .kpi-label {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #000;
+  font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .kpi-value {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 600;
   color: #111827;
   line-height: 1.2;
+  margin-bottom: 4px;
 }
 
 .kpi-trend {
   font-size: 0.75rem;
   color: #10b981;
+  font-weight: 400;
   margin-top: 0.25rem;
 }
 
@@ -1642,23 +1624,32 @@
 }
 
 .metric-label {
-  font-size: 0.75rem;
-  color: #6b7280;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  color: #000;
+ 
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .metric-value {
-  font-size: 1.25rem;
+    font-size: 1.75rem;
   font-weight: 600;
   color: #111827;
   display: block;
   margin: 0.25rem 0;
+
+  
+ 
 }
 
 .metric-sub {
-  font-size: 0.75rem;
-  color: #9ca3af;
+  /* font-size: 0.75rem;
+  color: #9ca3af; */
+    font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  text-transform: capitalize;
 }
 
 /* Charts Grid */
@@ -1833,29 +1824,30 @@
 }
 
 .department-tag {
-  background: #f3f4f6;
+  
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  color: #374151;
+ 
+  font-size: 0.95rem;
+  color: #000;
   white-space: nowrap;
 }
 
 .badge {
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+  border-radius: 4;
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .badge.present {
-  background: #d1fae5;
-  color: #065f46;
+  /* background: #065f4620; */
+  background: #e2fae2;
+  color: #008000;
 }
 
 .badge.absent {
-  background: #fee2e2;
-  color: #991b1b;
+  background: #f8dcdc80;
+  color: #ff0000;
 }
 
 .rate-indicator {

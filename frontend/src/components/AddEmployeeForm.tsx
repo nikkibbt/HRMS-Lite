@@ -63,7 +63,7 @@ const AddEmployeeForm = () => {
         });
       }
     } catch (err) {
-      // Silently fail - don't block user input
+    
       setEmployeeIdExists(false);
     } finally {
       setCheckingEmployeeId(false);
@@ -81,7 +81,7 @@ const AddEmployeeForm = () => {
       [name]: normalizedValue,
     });
     
-    // Clear errors for this field
+   
     setErrors({
       ...errors,
       [name]: undefined,
