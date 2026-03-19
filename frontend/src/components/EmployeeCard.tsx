@@ -42,8 +42,8 @@ const EmployeeCard = ({ employee, onDelete, onClick }: EmployeeCardProps) => {
           title="Delete employee"
         >
           <svg
-            width="24"
-            height="24"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="red"
